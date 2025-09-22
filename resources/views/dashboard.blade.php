@@ -1,28 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="flex w-full min-h-screen bg-white">
-  {{-- Sidebar kiri --}}
-  <aside class="w-64 bg-gradient-to-b from-[#0C2556] to-[#005C97] text-white shadow-xl">
-    @include('components.sidebar')
-  </aside>
+<div class="grid justify-items-center w-screen bg-white">
+  <div class="relative w-[1440px] h-[1024px] bg-white">
 
-  {{-- Kolom kanan --}}
-  <div class="flex-1 flex flex-col">
-    {{-- Top Navbar --}}
-    <header class="h-20 bg-white shadow flex items-center px-6">
+    <!-- Top Navbar -->
+    <div class="absolute w-[1157px] h-20 top-0 left-[283px]">
       @include('components.top-navbar')
-    </header>
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="absolute top-10 left-7">
+      @include('components.sidebar')
+    </div>
 
-    {{-- Konten utama --}}
-    <main class="flex-1 overflow-auto px-6 py-4">
-      {{-- Breadcrumbs dsb --}}
-      <x-main-card>
-      </x-main-card>
-    </main>
+    <!-- Main Content -->
+    <div class="absolute top-[103px] left-[301px]">
+      @include('components.main-content')
+    </div>
 
-    {{-- Notification kalau perlu di bawah konten --}}
-    <div class="px-6 py-4">
+    <!-- Notification -->
+    <div class="absolute top-[103px] left-[950px]">
       @include('components.notification')
     </div>
   </div>

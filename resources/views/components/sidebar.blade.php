@@ -1,7 +1,7 @@
 <div 
     x-data="{ pengeluaranExpanded: false, lapanganUsahaExpanded: false }" 
-    class="w-[250px] h-[950px] rounded-[40px] overflow-hidden shadow-[0px_21px_21px_1px_#2d1c4787] 
-            bg-gradient-to-b from-[#003e5e] to-[#0081c4] text-white"
+    class="w-[15.625rem] h-[59.375rem] rounded-[2.5rem] overflow-hidden shadow-[0_21px_21px_1px_rgba(45,29,71,0.53)] 
+           bg-gradient-to-b from-[#003E5E] to-[#0081C4] text-white flex-shrink-0"
 >
   <!-- Logo -->
   <div class="w-[133px] h-20 mx-auto mt-10">
@@ -19,7 +19,6 @@
 
   <!-- Menu Sidebar -->
   <nav class="mt-8 flex flex-col gap-2 px-4">
-
     <!-- Dashboard -->
     <a href="{{ route('dashboard') }}" 
       class="flex items-center gap-3 px-3 py-2 rounded hover:bg-[#334155] transition">
